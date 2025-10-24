@@ -20,8 +20,9 @@
   --feature-pink: hsl(340, 100%, 92%);
   --feature-peach: hsl(30, 100%, 90%);
   --feature-mint: hsl(130, 50%, 88%);
-  --feature-blue: hsl(230, 100%, 92%);
+  --feature-blue: hsl(211, 100%, 92%);
   --feature-yellow: hsl(50, 100%, 90%);
+  --feature-purple: hsl(250, 100%, 90%);
 }
 
 @theme inline {
@@ -49,6 +50,7 @@
   --color-feature-mint: var(--feature-mint);
   --color-feature-blue: var(--feature-blue);
   --color-feature-yellow: var(--feature-yellow);
+  --color-feature-purple: var(--feature-purple);
 }
 
 @layer base {

@@ -1,9 +1,8 @@
 import { Figma, FilePen, Globe, Landmark, Truck } from "lucide-react";
-import React, { Children } from "react";
 
 const BusinessSection = () => {
   return (
-    <section className='w-full min-h-screen px-18 py-14 bg-base-200'>
+    <section className='w-full min-h-screen px-18 py-14 bg-base-100'>
       <h2 className='text-5xl font-semibold text-center text-neutral max-w-4xl mx-auto'>
         Unlock more as your business grows.
       </h2>
@@ -46,7 +45,7 @@ const BusinessSection = () => {
         <CapabilityCard
           title='Integrated Payments Gateway'
           icon={<Landmark className='size-28 mx-auto' />}
-          className='md:col-span-2 bg-feature-blue'
+          className='md:col-span-2 bg-feature-mint'
           brandIcons={
             <div className='flex max-md:hidden items-center gap-4'>
               <img
@@ -70,14 +69,14 @@ const BusinessSection = () => {
 
         <CapabilityCard
           title='Design and Theme customization'
-          icon={<Globe className='size-28 mx-auto' />}
-          className='bg-feature-pink'
+          icon={<Figma className='size-28 mx-auto' />}
+          className='bg-feature-purple'
         />
 
         <CapabilityCard
           title='Integrated Shipment Partners'
           icon={<Truck className='size-28 mx-auto' />}
-          className='md:col-span-2 bg-feature-pink'
+          className='md:col-span-2 bg-feature-yellow'
           brandIcons={
             <div className='flex max-md:hidden items-center gap-4'>
               <img
@@ -114,6 +113,3 @@ const CapabilityCard = ({ title, icon, className, brandIcons }) => {
     </div>
   );
 };
-
-
-// git commit -m "Add business section"

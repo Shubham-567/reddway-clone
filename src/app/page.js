@@ -1,4 +1,5 @@
 import BusinessSection from "@/components/BusinessSection";
+import ExploreTemplatesSection from "@/components/ExploreTemplatesSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
@@ -14,6 +15,7 @@ const Home = () => {
       <HowItWorksSection />
       <TestimonialsSection />
       <BusinessSection />
+      <ExploreTemplatesSection />
     </main>
   );
 };
