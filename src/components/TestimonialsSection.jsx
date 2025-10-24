@@ -65,20 +65,19 @@ const TestimonialsSection = () => {
           <div
             key={testimonial.id}
             className='px-2 md:px-4 focus:outline-none h-full'>
-            <div className='flex flex-col md:flex-row items-stretch max-w-5xl mx-auto bg-base-100 rounded-2xl shadow-xl overflow-hidden min-h-[500px] md:min-h-[400px]'>
+            <div className='flex flex-col md:flex-row items-stretch gap-4 max-w-5xl mx-auto bg-base-100 rounded-2xl shadow-xl overflow-hidden min-h-[500px] md:min-h-[400px]'>
               {/* Image */}
               <div className='relative w-full md:w-2/5 aspect-5/4 md:aspect-auto'>
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   fill
-                  className='object-cover'
-                  sizes='(max-width: 768px) 100vw, 40vw'
+                  className='object-cover w-full h-full'
                 />
               </div>
 
               {/* Content */}
-              <div className='flex flex-col justify-between w-full md:w-3/5 px-6 py-8 md:py-16 md:px-10 text-left min-h-72'>
+              <div className='flex flex-col justify-between w-full md:w-3/5 px-6 py-6 md:py-16 md:px-10 text-left max-md:min-h-72'>
                 <h3 className='text-2xl md:text-3xl font-semibold leading-snug'>
                   {testimonial.review}
                 </h3>
