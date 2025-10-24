@@ -1,4 +1,4 @@
-# Reddway Homepage Clone
+# Reddway Clone
 
 A clone of the Reddway.io homepage. Reddway is a website builder platform that uses AI to help entrepreneurs and businesses create their own e-commerce stores and websites without needing to code.
 
@@ -46,13 +46,13 @@ You need to have **Node.js** (v14 or higher) installed on your computer.
 1.  **Clone the repository:**
 
     ```sh
-    git clone https://github.com/Shubham-567/reddway-homepage-clone.git 
+    git clone https://github.com/Shubham-567/reddway-clone.git
     ```
 
 2.  **Navigate to the project directory:**
 
     ```sh
-    cd reddway-homepage-clone
+    cd reddway-clone
     ```
 
 3.  **Install the dependencies:**
@@ -81,7 +81,7 @@ The project follows a standard Next.js application structure.
 - `src/components/`: Contains all reusable React components used on the homepage (e.g., `Navbar`, `Footer`, `VideoSection`, `TestimonialsSection`, etc.).
 
 ```plaintext
-reddway-homepage-clone/
+reddway-clone/
 ├── src
 │   ├── app
 │   │   ├── globals.css
