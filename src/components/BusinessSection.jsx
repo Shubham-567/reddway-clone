@@ -61,7 +61,7 @@ const BusinessSection = () => {
               <img
                 src='/icons/stripe.svg'
                 alt='brandIcons'
-                className='w-full h-8'
+                className='w-full h-14'
               />
             </div>
           }

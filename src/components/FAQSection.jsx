@@ -77,7 +77,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className='w-full bg-base-200 px-18 py-14'>
+    <section className='w-full bg-base-100 px-18 py-14'>
       <div className='space-y-8 text-center max-w-5xl mx-auto'>
         <h2 className='text-6xl font-semibold text-neutral'>
           Going digital has never been easier -{" "}
