@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 
 const TestimonialsSection = () => {
   const testimonials = [
