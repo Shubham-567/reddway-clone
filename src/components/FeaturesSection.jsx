@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const FeaturesSection = () => {
   return (
@@ -8,7 +7,6 @@ const FeaturesSection = () => {
         We've simplified the process, Introducing AI enabled website builder.
       </h2>
 
-      {/* featuresImage in center */}
       <div className='mt-10 max-w-4xl mx-auto'>
         <Image
           src='/featuresImage.webp'
@@ -22,5 +20,3 @@ const FeaturesSection = () => {
 };
 
 export default FeaturesSection;
-
-

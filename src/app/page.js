@@ -1,5 +1,6 @@
 import FeaturesSection from "@/components/FeaturesSection";
 import HeroSection from "@/components/HeroSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
 import VideoSection from "@/components/VideoSection";
 import React from "react";
 
@@ -9,6 +10,7 @@ const Home = () => {
       <HeroSection />
       <VideoSection />
       <FeaturesSection />
+      <HowItWorksSection />
     </main>
   );
 };
