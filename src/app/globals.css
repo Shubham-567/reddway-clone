@@ -8,7 +8,7 @@
 
   /* text colors */
   --neutral: hsl(0, 0%, 2%);
-  --neutral-muted: hsl(0, 0%, 20%);
+  --neutral-muted: hsl(0, 0%, 35%);
   --neutral-light: hsl(0, 0%, 95%);
 
   /* background colors */
@@ -66,10 +66,22 @@
   h6 {
     @apply text-neutral font-bold;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
 
 @layer components {
+  .btn {
+    @apply flex items-center gap-2 py-3 px-6 text-base font-medium rounded-xl w-fit;
+  }
+
   .btn-primary {
-    @apply flex items-center gap-2 bg-neutral text-neutral-light py-3 px-6 text-base font-medium rounded-xl w-fit;
+    @apply bg-neutral text-neutral-light;
+  }
+
+  .btn-secondary {
+    @apply bg-primary text-neutral-light;
   }
 }

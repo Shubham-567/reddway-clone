@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link href='/sing-in' className='font-medium hover:text-primary'>
           Sing in
         </Link>
-        <Link href='/sing-up' className='btn-primary py-2'>
+        <Link href='/sing-up' className='btn btn-primary py-2'>
           Create a free Store <ArrowRight className='size-4' />
         </Link>
       </nav>
