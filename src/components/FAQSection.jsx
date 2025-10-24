@@ -77,13 +77,13 @@ const FAQSection = () => {
   };
 
   return (
-    <section className='w-full bg-base-100 px-18 py-14'>
-      <div className='space-y-8 text-center max-w-5xl mx-auto'>
-        <h2 className='text-6xl font-semibold text-neutral'>
+    <section className='w-full bg-base-100 px-8 md:px-18 py-14'>
+      <div className='space-y-4 md:space-y-8 text-center max-w-5xl mx-auto'>
+        <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-neutral'>
           Going digital has never been easier -{" "}
           <span className='text-primary'>we promise!</span>
         </h2>
-        <p className='text-xl text-neutral font-base max-w-2xl mx-auto'>
+        <p className='text-lg md:text-xl text-neutral font-base max-w-2xl mx-auto'>
           Reddway has everything you need to run an online business in India.
           Get started with a free website.
         </p>
@@ -109,7 +109,7 @@ const FAQSection = () => {
                   <Plus className='size-6 text-neutral' />
                 )}
               </div>
-              <span className='text-lg font-semibold text-neutral pr-4'>
+              <span className='text-base md:text-lg font-semibold text-neutral pr-4'>
                 {faq.question}
               </span>
             </button>

@@ -9,7 +9,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Reddway Homepage Clone",
+  title: "Reddway",
   description: "Reddway Homepage Clone",
 };
 

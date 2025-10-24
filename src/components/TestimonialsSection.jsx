@@ -41,12 +41,17 @@ const TestimonialsSection = () => {
     autoplaySpeed: 3000,
     centerMode: true,
     centerPadding: "20%",
-
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerPadding: "10%",
+        },
+      },
       {
         breakpoint: 768,
         settings: {
-          centerPadding: "10%",
+          centerPadding: "0px",
         },
       },
     ],
@@ -56,21 +61,32 @@ const TestimonialsSection = () => {
     <section className='w-full px-0 py-8 bg-primary overflow-hidden'>
       <Slider {...settings}>
         {testimonials.map((testimonial) => (
-          <div key={testimonial.id} className='px-4 focus:outline-none'>
-            <div className='flex items-start justify-between gap-12 max-w-5xl h-[400px] mx-auto bg-base-100 rounded-lg shadow-xl overflow-hidden'>
-              <div className='w-2/5 h-full relative'>
+          // Testimonial card
+          <div
+            key={testimonial.id}
+            className='px-2 md:px-4 focus:outline-none h-full'>
+            <div className='flex flex-col md:flex-row items-stretch max-w-5xl mx-auto bg-base-100 rounded-2xl shadow-xl overflow-hidden min-h-[500px] md:min-h-[400px]'>
+              {/* Image */}
+              <div className='relative w-full md:w-2/5 aspect-5/4 md:aspect-auto'>
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   fill
-                  className='rounded-l-lg object-cover'
+                  className='object-cover'
+                  sizes='(max-width: 768px) 100vw, 40vw'
                 />
               </div>
 
-              <div className='w-3/5 space-y-8 py-16 pr-8'>
-                <h3 className='text-3xl font-semibold'>{testimonial.review}</h3>
-                <div className='pt-8'>
-                  <h4 className='text-xl font-bold'>{testimonial.name}</h4>
+              {/* Content */}
+              <div className='flex flex-col justify-between w-full md:w-3/5 px-6 py-8 md:py-16 md:px-10 text-left min-h-72'>
+                <h3 className='text-2xl md:text-3xl font-semibold leading-snug'>
+                  {testimonial.review}
+                </h3>
+
+                <div className='pt-6 md:pt-8'>
+                  <h4 className='text-lg md:text-xl font-bold'>
+                    {testimonial.name}
+                  </h4>
                   <p className='text-base font-medium text-neutral-muted'>
                     {testimonial.title}
                   </p>

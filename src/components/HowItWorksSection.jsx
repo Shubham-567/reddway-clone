@@ -31,12 +31,12 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className='w-full min-h-screen px-18 py-14 bg-base-100'>
-      <h2 className='text-5xl font-semibold text-center text-neutral max-w-4xl mx-auto'>
+    <section className='w-full min-h-screen px-8 md:px-18 py-14 bg-base-100'>
+      <h2 className='text-4xl lg:text-5xl font-semibold text-center text-neutral max-w-4xl mx-auto'>
         Here's How It Works
       </h2>
 
-      <div className='mt-20 max-w-5xl mx-auto flex flex-col md:flex-row gap-20'>
+      <div className='mt-20 max-w-5xl mx-auto flex flex-col md:flex-row max-md:flex-col-reverse gap-20'>
         {/* left side accordion */}
         <div className='w-full md:w-1/2 flex flex-col gap-6'>
           {steps.map((step, index) => (
@@ -52,7 +52,9 @@ const HowItWorksSection = () => {
                   <span className='text-lg font-semibold bg-primary text-neutral-light py-2 px-4 rounded-md'>
                     {index + 1}
                   </span>
-                  <h3 className='text-2xl font-semibold'>{step.title}</h3>
+                  <h3 className='text-xl md:text-2xl font-semibold'>
+                    {step.title}
+                  </h3>
                 </div>
 
                 {openIndex === index ? (

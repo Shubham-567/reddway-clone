@@ -13,7 +13,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className='bg-base-200'>
+    <footer className='bg-base-200 max-md:hidden'>
       <div className='flex items-center justify-between gap-6 py-14 px-18'>
         <div className='w-full max-w-4xl'>
           <div className='grid grid-cols-2 gap-2 px-30 justify-start items-center space-y-2 max-w-2xl'>

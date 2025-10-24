@@ -2,8 +2,8 @@ import { Figma, FilePen, Globe, Landmark, Truck } from "lucide-react";
 
 const BusinessSection = () => {
   return (
-    <section className='w-full min-h-screen px-18 py-14 bg-base-100'>
-      <h2 className='text-5xl font-semibold text-center text-neutral max-w-4xl mx-auto'>
+    <section className='w-full min-h-screen px-8 md:px-18 py-14 bg-base-100'>
+      <h2 className='text-3xl md:text-4xl lg:text-5xl tracking-wide font-semibold text-center text-neutral max-w-4xl mx-auto'>
         Unlock more as your business grows.
       </h2>
 
@@ -11,20 +11,20 @@ const BusinessSection = () => {
       <div className='mt-10 max-w-4xl mx-auto grid grid-cols-2 gap-4 md:grid-cols-3'>
         <CapabilityCard
           title='Custom Domain Setup'
-          icon={<Globe className='size-28 mx-auto' />}
+          icon={<Globe className='size-22 sm:size-24 md:size-28 mx-auto' />}
           className={"bg-feature-pink"}
         />
 
         <CapabilityCard
           title='Copywriting & Image selection'
-          icon={<FilePen className='size-28 mx-auto' />}
+          icon={<FilePen className='size-22 sm:size-24 md:size-28 mx-auto' />}
           className='bg-feature-peach'
         />
 
         <CapabilityCard
           title='Integrated Marketing Tools'
-          icon={<FilePen className='size-28 mx-auto' />}
-          className='md:row-span-2 bg-feature-blue'
+          icon={<FilePen className='size-22 sm:size-24 md:size-28 mx-auto' />}
+          className='max-md:col-span-2 md:row-span-2 bg-feature-blue'
           brandIcons={
             <div className='space-y-4 max-md:hidden'>
               <img
@@ -44,7 +44,7 @@ const BusinessSection = () => {
 
         <CapabilityCard
           title='Integrated Payments Gateway'
-          icon={<Landmark className='size-28 mx-auto' />}
+          icon={<Landmark className='size-22 sm:size-24 md:size-28 mx-auto' />}
           className='md:col-span-2 bg-feature-mint'
           brandIcons={
             <div className='flex max-md:hidden items-center gap-4'>
@@ -69,14 +69,14 @@ const BusinessSection = () => {
 
         <CapabilityCard
           title='Design and Theme customization'
-          icon={<Figma className='size-28 mx-auto' />}
+          icon={<Figma className='size-22 sm:size-24 md:size-28 mx-auto' />}
           className='bg-feature-purple'
         />
 
         <CapabilityCard
           title='Integrated Shipment Partners'
-          icon={<Truck className='size-28 mx-auto' />}
-          className='md:col-span-2 bg-feature-yellow'
+          icon={<Truck className='size-22 sm:size-24 md:size-28 mx-auto' />}
+          className='col-span-2 bg-feature-yellow'
           brandIcons={
             <div className='flex max-md:hidden items-center gap-4'>
               <img
@@ -107,7 +107,7 @@ const CapabilityCard = ({ title, icon, className, brandIcons }) => {
         className ? className : "bg-primary/10"
       }`}>
       {icon}
-      <h4 className='text-2xl font-light text-center'>{title}</h4>
+      <h4 className='text-xl sm:text-2xl font-light text-center'>{title}</h4>
 
       {brandIcons}
     </div>

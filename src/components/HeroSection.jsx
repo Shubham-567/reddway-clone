@@ -18,13 +18,13 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className='w-full px-18 py-2 mt-20'>
-      <div className='flex max-md:flex-col items-center justify-between gap-4 mb-28 '>
+    <section className='w-full px-8 md:px-18 py-2 mt-20'>
+      <div className='flex flex-col md:flex-row items-center justify-between gap-6 mb-28'>
         {/* left - text */}
-        <div className='space-y-2 max-w-xl'>
+        <div className='flex-1 min-w-0 space-y-2 max-w-xl'>
           <span className='text-sm'>Reddway website builder</span>
 
-          <h1 className='text-5xl/14 font-bold'>
+          <h1 className='text-3xl sm:text-4xl lg:text-5xl leading-tight font-bold'>
             Build, Manage & Grow Your Website, All in One Place!
           </h1>
 
@@ -32,18 +32,19 @@ const HeroSection = () => {
             launch your online store in 10 minutes – No Code Required.
           </p>
 
-          <button className='btn btn-primary mt-8'>Get Started Now</button>
+          <button className='btn btn-primary mt-6'>Get Started Now</button>
         </div>
 
         {/* right - hero image */}
-        <div className='flex-1'>
+        <div className='flex-1 md:flex-none w-full md:w-1/2'>
           <Image
             src='/hero.jpg'
-            loading='lazy'
-            className='w-full object-cover'
             alt='hero'
-            width={600}
-            height={600}
+            width={1200}
+            height={800}
+            loading='lazy'
+            className='w-full h-auto object-cover rounded-lg'
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px'
           />
         </div>
       </div>
@@ -66,7 +67,7 @@ const Review = ({ review }) => {
   const renderStars = (count) => {
     const stars = [];
     for (let i = 1; i <= count; i++) {
-      stars.push(<Star key={i} fill='black' className='size-5' />);
+      stars.push(<Star key={i} fill='black' className='size-4 sm:size-5' />);
     }
 
     return stars;
@@ -89,7 +90,9 @@ const Review = ({ review }) => {
       {/* stars */}
       <div className='flex items-center gap-2 '>
         {renderStars(review.stars)}
-        {review.stars % 1 !== 0 && <StarHalf fill='black' className='size-5' />}
+        {review.stars % 1 !== 0 && (
+          <StarHalf fill='black' className='size-4 sm:size-5' />
+        )}
       </div>
     </div>
   );

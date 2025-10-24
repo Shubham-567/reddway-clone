@@ -2,16 +2,14 @@ import React from "react";
 
 const VideoSection = () => {
   return (
-    <section className='flex justify-center items-center w-full h-screen px-18 py-2'>
-      <div className='w-full max-w-5xl'>
+    <section className='flex justify-center items-center w-full px-8 md:px-18 py-12'>
+      <div className='w-full max-w-5xl aspect-video rounded-lg overflow-hidden ring ring-neutral-muted/20 shadow-lg'>
         <iframe
-          width='100%'
-          height='100%'
-          src={`https://www.youtube.com/embed/alJPhBf2a2A?si=k20_UQ9j7lP278pk&amp;autoplay=0&amp;mute=1&amp;loop=1&amp;playlist=alJPhBf2a2A`}
-          allow='autoplay'
+          src='https://www.youtube.com/embed/alJPhBf2a2A?si=k20_UQ9j7lP278pk&autoplay=0&mute=1&loop=1&playlist=alJPhBf2a2A'
           title='YouTube video player'
-          allowFullScreen=''
-          className='w-full h-full min-h-[500px] rounded-lg ring ring-neutral-muted/20 shadow-lg'></iframe>
+          allow='autoplay'
+          allowFullScreen
+          className='w-full h-full'></iframe>
       </div>
     </section>
   );
