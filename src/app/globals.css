@@ -68,6 +68,6 @@
 
 @layer components {
   .btn-primary {
-    @apply flex items-center gap-1 bg-neutral text-neutral-light py-2 px-6 text-base font-medium rounded-xl;
+    @apply flex items-center gap-2 bg-neutral text-neutral-light py-3 px-6 text-base font-medium rounded-xl w-fit;
   }
 }

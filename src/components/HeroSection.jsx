@@ -1,0 +1,96 @@
+import { Star, StarHalf } from "lucide-react";
+import Image from "next/image";
+
+const HeroSection = () => {
+  const reviews = [
+    {
+      username: "Krishan",
+      stars: 5,
+    },
+    {
+      username: "Ajay",
+      stars: 4.5,
+    },
+    {
+      username: "Kritika",
+      stars: 4.5,
+    },
+  ];
+
+  return (
+    <section className='w-full px-18 py-2'>
+      <div className='flex max-md:flex-col items-center justify-between gap-4 mb-28 '>
+        {/* left - text */}
+        <div className='space-y-2 max-w-xl'>
+          <span className='text-sm'>Reddway website builder</span>
+
+          <h1 className='text-5xl/14 font-bold'>
+            Build, Manage & Grow Your Website, All in One Place!
+          </h1>
+
+          <p className='text-lg text-neutral-muted font-base'>
+            launch your online store in 10 minutes – No Code Required.
+          </p>
+
+          <button className='btn-primary mt-8'>Get Started Now</button>
+        </div>
+
+        {/* right - hero image */}
+        <div className='flex-1'>
+          <Image
+            src='/hero.jpg'
+            loading='lazy'
+            className='w-full object-cover'
+            alt='hero'
+            width={600}
+            height={600}
+          />
+        </div>
+      </div>
+
+      {/* reviews */}
+      <div className='flex justify-around items-center gap-4 my-16 md:max-w-3xl mx-auto'>
+        {reviews
+          ? reviews.map((review) => (
+              <Review key={review.username} review={review} />
+            ))
+          : null}
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
+
+const Review = ({ review }) => {
+  const renderStars = (count) => {
+    const stars = [];
+    for (let i = 1; i <= count; i++) {
+      stars.push(<Star key={i} fill='black' className='size-5' />);
+    }
+
+    return stars;
+  };
+
+  return (
+    <div className='space-y-3' key={review.username}>
+      <div className='flex items-center justify-center gap-3'>
+        <Image
+          src={`/${review.username}.webp`}
+          loading='lazy'
+          className='size-8 rounded-full object-cover'
+          alt='avatar'
+          width={50}
+          height={50}
+        />
+        <h4 className='font-normal'>{review.username}</h4>
+      </div>
+
+      {/* stars */}
+      <div className='flex items-center gap-2 '>
+        {renderStars(review.stars)}
+        {review.stars % 1 !== 0 && <StarHalf fill='black' className='size-5' />}
+      </div>
+    </div>
+  );
+};
