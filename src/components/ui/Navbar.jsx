@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className='flex justify-between items-center gap-4 py-3 px-18'>
+    <header className='bg-base-100 fixed top-0 left-0 right-0 flex justify-between items-center gap-4 py-3 px-18 z-40 shadow-xs'>
       {/* logo */}
       <Link href='/' className='flex items-center gap-2'>
         <img src='/reddwayLogo.svg' alt='logo' className='w-full' />

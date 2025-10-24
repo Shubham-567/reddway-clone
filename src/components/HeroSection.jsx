@@ -18,7 +18,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className='w-full px-18 py-2'>
+    <section className='w-full px-18 py-2 mt-20'>
       <div className='flex max-md:flex-col items-center justify-between gap-4 mb-28 '>
         {/* left - text */}
         <div className='space-y-2 max-w-xl'>

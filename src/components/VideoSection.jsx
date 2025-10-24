@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoSection = () => {
   return (
-    <section className='flex justify-center items-center w-full h-screen'>
+    <section className='flex justify-center items-center w-full h-screen px-18 py-2'>
       <div className='w-full max-w-5xl'>
         <iframe
           width='100%'
@@ -11,7 +11,7 @@ const VideoSection = () => {
           allow='autoplay'
           title='YouTube video player'
           allowFullScreen=''
-          className='w-full h-full min-h-[500px] rounded-lg'></iframe>
+          className='w-full h-full min-h-[500px] rounded-lg ring ring-neutral-muted/20 shadow-lg'></iframe>
       </div>
     </section>
   );

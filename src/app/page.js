@@ -1,3 +1,4 @@
+import FeaturesSection from "@/components/FeaturesSection";
 import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
 import React from "react";
@@ -7,6 +8,7 @@ const Home = () => {
     <main className='flex min-h-screen flex-col items-center justify-between'>
       <HeroSection />
       <VideoSection />
+      <FeaturesSection />
     </main>
   );
 };
