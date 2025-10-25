@@ -6,14 +6,17 @@ const HeroSection = () => {
     {
       username: "Krishan",
       stars: 5,
+      profilePic: "/Krishan.webp",
     },
     {
       username: "Ajay",
       stars: 4.5,
+      profilePic: "/Ajay.webp",
     },
     {
       username: "Kritika",
       stars: 4.5,
+      profilePic: "/Kritika.webp",
     },
   ];
 
@@ -77,7 +80,7 @@ const Review = ({ review }) => {
     <div className='space-y-3' key={review.username}>
       <div className='flex items-center justify-center gap-3'>
         <Image
-          src={`/${review.username}.webp`}
+          src={review.profilePic}
           loading='lazy'
           className='size-8 rounded-full object-cover'
           alt='avatar'

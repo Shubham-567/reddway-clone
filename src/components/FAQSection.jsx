@@ -95,13 +95,12 @@ const FAQSection = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
+            onClick={() => handleToggle(index)}
             className={`p-6 ring ring-neutral-muted/20 rounded-xl shadow-md transition-all duration-300 bg-base-100 hover:bg-base-200 cursor-pointer
             ${openIndexes.includes(index) ? "ring-1 ring-primary" : ""}
           `}>
             {/* question */}
-            <button
-              onClick={() => handleToggle(index)}
-              className='flex items-start gap-2 w-full text-left focus:outline-none'>
+            <div className='flex items-start gap-2 w-full text-left focus:outline-none'>
               <div className='shrink-0 size-6 text-neutral transition-transform duration-300 relative '>
                 {openIndexes.includes(index) ? (
                   <Minus className='size-6 text-neutral' />
@@ -109,10 +108,10 @@ const FAQSection = () => {
                   <Plus className='size-6 text-neutral' />
                 )}
               </div>
-              <span className='text-base md:text-lg font-semibold text-neutral pr-4'>
+              <h4 className='text-base md:text-lg font-semibold text-neutral pr-4'>
                 {faq.question}
-              </span>
-            </button>
+              </h4>
+            </div>
 
             {/* answer */}
             <div

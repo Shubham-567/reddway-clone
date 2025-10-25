@@ -42,12 +42,11 @@ const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className='flex flex-col gap-3 hover:bg-base-200 ring ring-neutral-muted/20 p-4 rounded-lg transition-all duration-300 ease-in-out'>
-              <div
-                className='flex items-center justify-between gap-2 cursor-pointer'
-                onClick={() =>
-                  openIndex === index ? setOpenIndex(null) : setOpenIndex(index)
-                }>
+              className='flex flex-col gap-3 hover:bg-base-200 ring ring-neutral-muted/20 p-4 rounded-lg transition-all duration-300 ease-in-out cursor-pointer'
+              onClick={() =>
+                openIndex === index ? setOpenIndex(null) : setOpenIndex(index)
+              }>
+              <div className='flex items-center justify-between gap-2'>
                 <div className='flex items-center gap-4'>
                   <span className='text-lg font-semibold bg-primary text-neutral-light py-2 px-4 rounded-md'>
                     {index + 1}
