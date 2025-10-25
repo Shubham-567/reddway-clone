@@ -50,7 +50,7 @@ const HeroSection = () => {
       </div>
 
       {/* reviews */}
-      <div className='flex justify-around items-center gap-4 my-16 md:max-w-3xl mx-auto'>
+      <div className='flex flex-wrap justify-around items-center gap-4 my-16 md:max-w-3xl mx-auto'>
         {reviews
           ? reviews.map((review) => (
               <Review key={review.username} review={review} />
@@ -88,7 +88,7 @@ const Review = ({ review }) => {
       </div>
 
       {/* stars */}
-      <div className='flex items-center gap-2 '>
+      <div className='flex items-center justify-center gap-0.5 sm:gap-2 '>
         {renderStars(review.stars)}
         {review.stars % 1 !== 0 && (
           <StarHalf fill='black' className='size-4 sm:size-5' />

@@ -95,7 +95,7 @@ const FAQSection = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`p-6 ring ring-neutral-muted/20 rounded-xl shadow-md transition-all duration-300 bg-base-100 cursor-pointer
+            className={`p-6 ring ring-neutral-muted/20 rounded-xl shadow-md transition-all duration-300 bg-base-100 hover:bg-base-200 cursor-pointer
             ${openIndexes.includes(index) ? "ring-1 ring-primary" : ""}
           `}>
             {/* question */}

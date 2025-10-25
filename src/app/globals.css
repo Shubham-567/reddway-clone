@@ -55,7 +55,7 @@
 
 @layer base {
   body {
-    @apply bg-base-100 text-neutral-muted font-outfit;
+    @apply bg-base-100 text-neutral-muted font-outfit selection:bg-primary selection:text-neutral-light;
   }
 
   h1,
@@ -77,11 +77,12 @@
     @apply flex items-center justify-center gap-2 
     px-5 py-3 sm:px-6 sm:py-3.5 
     text-sm sm:text-base font-medium rounded-xl w-fit
-    transition-all duration-300 active:scale-95;
+    transition-all duration-300 active:scale-95
+    hover:shadow-xl hover:-translate-y-1;
   }
 
   .btn-primary {
-    @apply bg-neutral text-neutral-light hover:bg-neutral/80;
+    @apply bg-neutral text-neutral-light hover:bg-neutral/90;
   }
 
   .btn-secondary {

@@ -38,11 +38,11 @@ const HowItWorksSection = () => {
 
       <div className='mt-20 max-w-5xl mx-auto flex flex-col md:flex-row max-md:flex-col-reverse gap-20'>
         {/* left side accordion */}
-        <div className='w-full md:w-1/2 flex flex-col gap-6'>
+        <div className='w-full md:w-1/2 flex flex-col gap-4'>
           {steps.map((step, index) => (
             <div
               key={index}
-              className='flex flex-col gap-3 transition-all duration-300 ease-in-out'>
+              className='flex flex-col gap-3 hover:bg-base-200 ring ring-neutral-muted/20 p-4 rounded-lg transition-all duration-300 ease-in-out'>
               <div
                 className='flex items-center justify-between gap-2 cursor-pointer'
                 onClick={() =>

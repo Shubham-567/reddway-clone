@@ -8,7 +8,7 @@ const ExploreTemplatesSection = () => {
       </h2>
 
       <Image
-        src='/templatesImage.webp'
+        src='/TemplatesImage.webp'
         alt='templatesImage'
         width={1000}
         height={1000}

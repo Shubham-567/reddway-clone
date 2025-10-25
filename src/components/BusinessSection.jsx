@@ -103,8 +103,8 @@ export default BusinessSection;
 const CapabilityCard = ({ title, icon, className, brandIcons }) => {
   return (
     <div
-      className={`flex flex-col justify-center items-center gap-4 p-8 rounded-2xl min-h-[300px]  ${
-        className ? className : "bg-primary/10"
+      className={`flex flex-col justify-center items-center gap-4 p-8 rounded-2xl min-h-[300px] hover:-translate-y-2 transition-all duration-300 ease-in-out ${
+        className || "bg-primary/10"
       }`}>
       {icon}
       <h4 className='text-xl sm:text-2xl font-light text-center'>{title}</h4>
