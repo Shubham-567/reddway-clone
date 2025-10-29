@@ -62,10 +62,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className='text-center text-sm border-t border-neutral-muted/30 py-3'>
-        Copyright © {new Date().getFullYear()} Reddway Hyperspace Systems
-        Private Limited
-      </p>
+      <div>
+        <p className='text-center text-sm border-t border-neutral-muted/30 py-3'>
+          Copyright © {new Date().getFullYear()} Reddway Hyperspace Systems
+          Private Limited
+        </p>
+      </div>
     </footer>
   );
 };

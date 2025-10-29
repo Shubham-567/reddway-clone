@@ -16,13 +16,37 @@
   --base-200: hsl(210, 20%, 98%);
   --base-300: hsl(210, 20%, 95%);
 
-  /* feature blocks colors--- */
+  /* feature blocks colors */
   --feature-pink: hsl(340, 100%, 92%);
   --feature-peach: hsl(30, 100%, 90%);
   --feature-mint: hsl(130, 50%, 88%);
   --feature-blue: hsl(211, 100%, 92%);
   --feature-yellow: hsl(50, 100%, 90%);
   --feature-purple: hsl(250, 100%, 90%);
+}
+
+.dark {
+  --primary: hsl(147, 93%, 31%);
+  --secondary: hsl(349, 89%, 60%);
+  --accent: hsl(207, 90%, 54%);
+
+  /* text colors */
+  --neutral: hsl(0, 0%, 95%);
+  --neutral-muted: hsl(0, 0%, 65%);
+  --neutral-light: hsl(0, 0%, 15%);
+
+  /* background colors */
+  --base-100: hsl(0, 0%, 4%);
+  --base-200: hsl(0, 0%, 8%);
+  --base-300: hsl(0, 0%, 12%);
+
+  /* feature blocks colors */
+  --feature-pink: hsl(340, 100%, 5%);
+  --feature-peach: hsl(30, 100%, 5%);
+  --feature-mint: hsl(130, 50%, 5%);
+  --feature-blue: hsl(211, 100%, 5%);
+  --feature-yellow: hsl(50, 100%, 5%);
+  --feature-purple: hsl(250, 100%, 5%);
 }
 
 @theme inline {
@@ -44,7 +68,7 @@
   --color-base-200: var(--base-200);
   --color-base-300: var(--base-300);
 
-  /* feature blocks colors--- */
+  /* feature blocks colors */
   --color-feature-pink: var(--feature-pink);
   --color-feature-peach: var(--feature-peach);
   --color-feature-mint: var(--feature-mint);

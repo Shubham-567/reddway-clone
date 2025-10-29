@@ -1,11 +1,12 @@
 "use client";
 
-import { ArrowRight, Menu, X } from "lucide-react";
+import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const mobileNavLinks = [
     { label: "About us", href: "#" },
@@ -20,12 +21,25 @@ const Navbar = () => {
     { label: "Guide", href: "#" },
   ];
 
+  const handleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+
+    if (isDarkMode) {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  };
+
   return (
     <header>
       <div className='bg-base-100 fixed top-0 left-0 right-0 flex justify-between items-center gap-4 py-4 px-8 md:px-18 z-40 shadow-md md:shadow-xs'>
         <div className='flex items-center gap-4'>
           {/* mobile nav toggle */}
-          <button className='md:hidden' onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className='md:hidden'
+            aria-label='toggle navigation'
+            onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className='size-6' /> : <Menu className='size-6' />}
           </button>
 
@@ -35,7 +49,20 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <nav className='flex items-center gap-6'>
+        <nav className='flex items-center gap-3 md:gap-6'>
+          <button
+            className={`p-2 rounded-full bg-primary/10 hover:bg-primary/20 cursor-pointer transition-transform transform duration-300 ${
+              isDarkMode ? "rotate-0" : "rotate-180"
+            }`}
+            onClick={handleDarkMode}
+            aria-label='Toggle dark mode'>
+            {isDarkMode ? (
+              <Moon className='size-5' />
+            ) : (
+              <Sun className='size-5' />
+            )}
+          </button>
+
           <Link
             href='/pricing'
             className='font-medium hover:text-primary max-md:hidden'>

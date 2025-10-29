@@ -35,7 +35,9 @@ const HeroSection = () => {
             launch your online store in 10 minutes – No Code Required.
           </p>
 
-          <button className='btn btn-primary mt-6'>Get Started Now</button>
+          <button className='btn btn-primary mt-6' aria-label='get started'>
+            Get Started Now
+          </button>
         </div>
 
         {/* right - hero image */}
